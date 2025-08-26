@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tahreez Reception Avatar (Proto Luma)</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="ui">
+    <div class="row">
+      <label>Language:</label>
+      <select id="lang">
+        <option value="ar-SA">العربية</option>
+        <option value="en-US" selected>English</option>
+      </select>
+      <button id="talk" title="Hold to talk">🎙️ Hold to talk</button>
+      <button id="mute" title="Mute/Unmute audio">🔈</button>
+    </div>
+    <div class="row small">
+      <label><input type="checkbox" id="autorotate" checked /> Auto sway</label>
+      <label><input type="checkbox" id="faceTrack" checked /> Face track</label>
+      <label><input type="checkbox" id="lipSync" checked /> Lip sync</label>
+    </div>
+    <div class="row small">
+      <span class="hint">Tip: 9:16 viewport, Wi‑Fi enabled. Camera & mic access are automatic on ProtoOS.</span>
+    </div>
+    <div id="last"></div>
+  </div>
+
+  <canvas id="scene"></canvas>
+  <video id="cam" autoplay playsinline muted style="display:none"></video>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
